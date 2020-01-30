@@ -1,0 +1,56 @@
+.part{
+  width: 60%;
+  margin-left: 19%;
+}
+
+.danger{
+  position:relative;
+  color: transparent;
+  text-shadow: 0 0 1em white;
+  cursor:help;
+  transition: all 1s;
+}
+
+.danger:hover{
+  color: white;
+  text-shadow: 0 0 0 transparent;
+  transition-delay:2s;
+}
+
+.ourTeam{
+  width: 99%;
+    .card{
+      border: none;
+    }
+}
+
+.crewName{
+  a{
+    font-size: 25px;
+    font-family: $title-font;
+  }
+}
+
+.Crew{
+  margin:5%;
+  margin-left: 19%;
+  .imageCrew{
+    img{
+      max-width: 1000%;
+      width: 150%;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+
+  .Crew{
+    .imageCrew{
+      img{
+        max-width: 100%;
+      }
+    }
+  }
+
+}
+

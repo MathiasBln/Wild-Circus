@@ -1,0 +1,20 @@
+<?php
+
+
+namespace App\Controller;
+
+
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+
+class AboutUsController extends AbstractController
+{
+    /**
+     * @Route("/about_us", name="about_us")
+     */
+    public function index(): Response
+    {
+        return $this->render('about_us/index.html.twig');
+    }
+}
