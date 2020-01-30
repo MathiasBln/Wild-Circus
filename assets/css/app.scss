@@ -1,0 +1,18 @@
+@import "~bootstrap/scss/bootstrap";
+@import "vars";
+@import "home";
+
+body {
+  background-color: $primary-color;
+  color: $secondary-color;
+}
+
+footer {
+  h5 {
+    color: $third-color;
+  }
+}
+
+h2{
+  font-family: $title-font;
+}
