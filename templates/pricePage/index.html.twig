@@ -1,0 +1,40 @@
+{% extends'base.html.twig' %}
+
+{% block body %}
+
+
+
+    <section class="Price container-fluid mt-5">
+        <h2 class="titlePrice text-center mt-5">Our Prices</h2>
+        <div class="row">
+            {% for price in prices %}
+            <div class="col-sm-6 mb-5">
+                <div class="card">
+                    <div class="card-body priceBody">
+                        <h3 class="card-title text-center">{{ price.title }}</h3>
+                        <div class="row">
+                            <div class="boxCategory">
+                                <h6 class="mb-3">Weeks(except Wednesday)</h6>
+                                <p class="card-text text-center">{{ price.priceWeek }}€</p>
+                            </div>
+                            <div class="boxCategory">
+                                <h6 class="mb-3">Weekend and Wednesday</h6>
+                                <p class="card-text text-center">{{ price.priceWeekend }}€</p>
+                            </div>
+                            <div class="boxCategory">
+                                <h6 class="mb-3">School holidays</h6>
+                                <p class="card-text text-center">{{ price.priceHolidays }}€</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <p class="m-5">*No online reservation, tickets must be purchased at the entrance of the circus</p>
+
+    </section>
+
+{% endblock %}
