@@ -1,0 +1,102 @@
+{% extends'base.html.twig' %}
+
+{% block body %}
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100"
+                     src="https://laporteouvertedotme.files.wordpress.com/2016/03/messe-noire-felicien-rops.jpg?w=584"
+                     alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100"
+                     src="http://www.rockschool-barbey.com/images/_stock/1550236309_3745129912/1550236309_3745129912_couv.png"
+                     alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100"
+                     src="https://hardforce.com/img/uploads/Posts/2014/05/Behemoth2013d_1391985013_crop_550x367.jpg"
+                     alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+
+    <section class="boxPref">
+        <div class="Performances">
+            <h2 class="text-center mb-4 mt-5">Performances</h2>
+            <div class="container">
+                <div class="card-deck">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title">1 Card title</h4>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title">2 Card title</h4>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title">3 Card title</h4>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="form">
+        <div class="boxForm">
+            <div class="container-fluid links" id="contact">
+                <h2 class="contact text-center mb-4 mt-5">Contact-Us</h2>
+                <div class="row justify-content-md-center">
+                    <img src="https://blackwitchcoven.com/wp-content/uploads/2018/09/42607381_2148502712071739_2959635240387084288_n-w-e1556234483954.png" class="witchcraft mr-5">
+                    <div class="col-lg-5">
+                        {{ form_start(form) }}
+                        <div class="row">
+                            <div class="col colName">{{ form_row(form.name) }}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col colSubject">{{ form_row(form.subject) }}</div>
+                        </div>
+                        <div class="row textarea">
+                            <div class="col colMessage">{{ form_row(form.message) }}</div>
+                        </div>
+                        <div class="form-group buttonForm text-center mt-3">
+                            <button type="submit" class="logButton"><img src="upload/satan.png" class="mr-2" alt="hell">Subscribe
+                            </button>
+                            {{ form_end(form) }}
+                        </div>
+                    </div>
+                    <img src="https://blackwitchcoven.com/wp-content/uploads/2018/09/42607381_2148502712071739_2959635240387084288_n-w-e1556234483954.png" class="witchcraft ml-5">
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
