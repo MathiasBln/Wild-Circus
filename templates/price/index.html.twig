@@ -1,36 +1,41 @@
-{% extends'base.html.twig' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}Price index{% endblock %}
 
 {% block body %}
+    <h1>Price index</h1>
 
-    <h2 class="titlePrice text-center mt-5">Our Prices</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>PriceWeek</th>
+                <th>PriceWeekend</th>
+                <th>PriceHolidays</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for price in prices %}
+            <tr>
+                <td>{{ price.id }}</td>
+                <td>{{ price.title }}</td>
+                <td>{{ price.priceWeek }}</td>
+                <td>{{ price.priceWeekend }}</td>
+                <td>{{ price.priceHolidays }}</td>
+                <td>
+                    <a href="{{ path('price_show', {'id': price.id}) }}">show</a>
+                    <a href="{{ path('price_edit', {'id': price.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 
-    <section class="Price container-fluid mt-5">
-        <div class="row">
-            <div class="col-sm-6 mb-5">
-                <div class="card">
-                    <div class="card-body priceBody">
-                        <h3 class="card-title text-center">Adult</h3>
-                        <div class="row">
-                            <div class="boxCategory">
-                                <h6 class="mb-3">Weeks(except Wednesday)</h6>
-                                <p class="card-text text-center">30€</p>
-                            </div>
-                            <div class="boxCategory">
-                                <h6 class="mb-3">Weekend and Wednesday</h6>
-                                <p class="card-text text-center">30€</p>
-                            </div>
-                            <div class="boxCategory">
-                                <h6 class="mb-3">School holidays</h6>
-                                <p class="card-text text-center">30€</p>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
+    <a href="{{ path('price_new') }}">Create new</a>
 {% endblock %}
