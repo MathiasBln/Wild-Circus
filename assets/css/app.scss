@@ -3,6 +3,8 @@
 @import "home";
 @import "price";
 @import "date";
+@import "about_us";
+
 
 body {
   background-color: $primary-color;
@@ -15,6 +17,11 @@ footer {
   }
 }
 
-h2{
+h5, h4, h3, h2, h1{
   font-family: $title-font;
+  color:$secondary-color;
+}
+
+h6{
+  color:$secondary-color;
 }

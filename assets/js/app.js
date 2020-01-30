@@ -15,3 +15,4 @@ require('bootstrap');
 // eslint-disable-next-line import/no-extraneous-dependencies
 
 console.log('Hello Webpack Encore! Edit me in assets/js/app.js');
+
