@@ -34,24 +34,21 @@
             <div uk-grid>
                 <div class="uk-width-auto@m">
                     <ul class="uk-tab-left" uk-tab="connect: #component-tab-left; animation: uk-animation-fade">
-                        <li class="crewName"><a href="#">Arthas</a></li>
-                        <li class="crewName"><a href="#">Paladin</a></li>
-                        <li class="crewName"><a href="#">Maitre-Lame</a></li>
+                        {% for crew in crews %}
+                        <li class="crewName"><a href="#">{{crew.name}}</a></li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="uk-width-expand@m imageCrew">
                     <ul id="component-tab-left" class="uk-switcher">
+                        {% for crew in crews %}
                         <li>
-                            <p>Test</p>
-                            <img src="https://gamepedia.cursecdn.com/deadbydaylight_de_gamepedia/thumb/8/81/StoreBackground_NR.png/240px-StoreBackground_NR.png" alt="">
+                            <p class="resumeCrew">{{crew.resume}}</p>
+                            <img src="{{crew.image}}" alt="">
 
                         </li>
-                        <li>
-                            <img src="https://vignette.wikia.nocookie.net/smt64-and-friends/images/f/f5/9437B091-D7A5-4EE7-84C4-A8FDBB8F3076.png/revision/latest?cb=20190916212430" alt="">
-                        </li>
-                        <li>
-                            <img src="https://static.tvtropes.org/pmwiki/pub/images/storebackground_mk.png" alt="">
-                        </li>
+                        {% endfor %}
+
                     </ul>
                 </div>
             </div>
